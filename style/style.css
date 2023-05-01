@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ede8e8;
+   
+}
+
+/* html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 200px;
+} */
+
+body{
+    background: #080708;
+    transition: background 0.2s linear;
+}
+
+body.dark {
+    background: #ede8e8;
+}
+
+header{
+    width: 100%;
+    max-height: 100%;
+    padding: 0 2%;
+    background: #080708;
+    position: fixed;
+    z-index: 99;
+   
+}
+
+header .change-background{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    right: 2%;
+}
+
+header .box-ch-background .checkbox{
+    position: relative;
+    opacity: 0;
+}
+
+
+header .box-ch-background label{
+    width: 50px;
+    height: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+
+    position: absolute;
+    background: #111;
+    border-radius: 50px;
+    transform: scale(1.3);
+}
+
+header .box-ch-background .ball{
+width: 22px;
+height: 22px;
+border-radius: 50%;
+background: #eb0e0e;
+position: absolute;
+top: 2px;
+left: 2px;
+transform: translateX(0);
+transition: transform 0.2s linear;
+}
+
+header .box-ch-background .checkbox:checked+label .ball{
+    transform: translateX(24px);
+}
+
+.fa-moon,.fa-sun  {
+    color: #fff;
+}
+
+.color-text{
+    color: #000;
+
+}
+
+
+.container{
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+header .logo{
+    width: 120px;
+    height: 80px;
+
+    background-image: url(../img/logo-dev.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+}
+ .logo-emblema{
+    margin: 0 auto;
+    width: 150px;
+    height: 100px;
+
+    background-image: url(../img/Emblema-001.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+}
+
+
+header nav #menu{
+    display: flex;
+    list-style-type: none;
+    gap: 40px; 
+}
+
+header nav a{
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    padding: 1rem;
+}
+
+#btn-mobile{
+    cursor: pointer;
+    padding: .5rem;
+    position: absolute;
+    right:2% ;
+    background: none;
+    border: 0;
+    display: none;
+
+}
+
+/********************************* Start Sections **********************************/
+
+section.father{
+    display: inline-block;
+    width: 100%;
+    padding: 0px 2%;
+    margin-top: 200px;
+    overflow-x: hidden;
+}
+
+section{
+    margin-bottom: 100px;
+}
+
+h1{
+    margin: 0 auto;
+    max-width: 1400px;
+    background: linear-gradient(45deg,#ff0000,#330101);
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #080708;
+}
+h2{
+
+    background: linear-gradient(45deg,#333131,#aca5a5);
+    text-align: center;
+    padding: 10px;
+}
+p{
+    font-size: 19px;
+    text-align: justify;
+}
+
+a{
+    text-decoration: none;
+    color: #b7b0b0;
+}
+
+ /*********************************  Section About-me **********************************/
+
+section.about-me .box-skills{
+    height: 60px;
+}
+section.about-me .box-skills >.container{
+    justify-content: space-around;
+   
+}
+
+section.about-me .lang-skills{
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius:50% ;
+    background: rgb(206, 12, 12);  
+}
+
+section.about-me .box-img-dev{
+    width:400px ;
+    height: 400px;
+}
+
+section.about-me .box-img-dev .img-dev{
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/img-dev.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+section.about-me .text-about-me{
+    width: 60%;
+    padding: 20px;
+    line-height:30px;   
+}
+
+/*********************************  Sections Projects **********************************/
+ 
+
+section.projects .text-project{
+width: 50%;
+height: 100%;
+
+}
+
+section.projects .video-projects{
+    width: 50%;
+    height: 500px;
+    background: #1f221f;
+}
+
+section.projects .text-project button{
+    margin: 0 auto;
+    background: linear-gradient(#000,gray,#000);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 1rem;
+    border: 0;
+ 
+}
+section.projects .container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+/* Animation section Projects */
+
+[data-anime]{
+    opacity: 0;
+    transition: 1s;
+}
+
+[data-anime="left"]{
+    transform: translate3d(100px, 0px ,0px);
+}
+[data-anime="right"]{
+    transform: translate3d(-100px, 0px ,0px);
+}
+[data-anime].animate{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+
+}
+
+/* Media Queries */
+
+@media screen and (max-width:650px) {
+
+
+header .logo{
+width: 100px;
+height: 60px;
+
+}
+.logo-emblema{
+margin: 0 auto;
+width: 100px;
+height: 100px;
+
+}
+
+
+header .box-ch-background {
+    position: absolute;
+    right: 45px;
+}
+
+header nav{
+position: relative;    
+
+/* display: none; */
+}
+
+header nav #menu{
+display: block;
+position: absolute;
+gap: 40px;
+width: 0px; 
+height: 0;
+right: 0;
+top: 40px;
+text-align: center;
+background:linear-gradient(-45deg,#080708,#363535);
+transition: 1s;
+z-index: 1000;
+visibility: hidden;
+overflow: hidden;
+
+}
+
+header nav.active #menu{
+height: 16.3vh;
+width: 100px; 
+visibility: visible;
+/* caso queira add mais links ao menu habilitar overflow-y: auto; */
+/* overflow-y: auto; */ 
+border-radius: 0;
+
+}
+
+header nav li{
+border-bottom: 1px solid #b0abab;
+}
+
+
+header #btn-mobile{
+padding: .5rem;
+position: absolute;
+display: flex;
+top: -10px;  
+}
+
+header #hamburguer{
+color: #ff0000;
+width: 30px;
+border-top: 2px solid;   
+}
+header #hamburguer::after,#hamburguer::before{
+display: block;
+content: '';
+width: 30px;
+height: 2px ;
+background: currentColor;
+margin-top: 5px;
+transition: 0.3s;
+
+}
+
+header nav.active #hamburguer{
+border-top-color: transparent ; 
+
+}
+
+header nav.active #hamburguer::before{
+position: relative;
+transform: rotate(135deg);
+top: 7px;
+}
+header nav.active #hamburguer::after{
+position: relative;
+transform: rotate(-135deg);
+
+}
+
+
+/********************************* Media queries Section About-me **********************************/
+
+
+section.about-me .container{
+flex-direction: column;
+
+
+}
+
+
+section.about-me .box-skills{
+position: relative;
+
+}
+
+section.about-me .box-skills > .container{
+    position: relative;
+   flex-direction: row;  
+    
+}
+
+
+section.about-me .lang-skills{
+width: 25px;
+height: 25px;
+font-size: 25px;
+;  
+}
+
+section.about-me .box-img-dev{
+width:150px ;
+height: 150px;
+transition: 1s;
+
+}
+
+section.about-me .text-about-me{
+width: 100%;  
+}
+
+
+
+/********************************* Media queries Section Projects **********************************/
+
+section.projects .container{
+    flex-wrap: wrap-reverse;
+    margin-bottom: 40px;
+}
+
+section.projects .text-project{
+    width: 100%;
+    height: 100%;
+    
+    }
+    
+    section.projects .video-projects{
+        width: 100%;
+        height: 400px;
+       
+    }
+    
+    section.projects .text-project button{
+        margin: 0 auto;
+        background: linear-gradient(#000,gray);
+        text-decoration: none;
+        font-size: 20px;
+        padding: 1rem;
+     
+    }
+   
+
+}
