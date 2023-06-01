@@ -1,6 +1,6 @@
 
 window.onload = function(){
- 
+//  Change background-color :
     const changeBackground = document.querySelector(".box-ch-background #check")
     changeBackground.addEventListener('click',function(){
         const text = document.querySelectorAll('.text p');
@@ -9,23 +9,47 @@ window.onload = function(){
             el.classList.toggle('color-text')
         })
     })
+// --------------------------------------------------------
+
+    const btnMobile = document.querySelector("#btn-mobile");
+
+    function toggleMenu(event_2){
+        if(event_2.type === 'touchstart ') event_2.preventDefault();
+           
+        
+        const nav = document.querySelector("nav");
+        nav.classList.toggle('active');
+        const active = nav.classList.contains('active');
+        event_2.currentTarget.setAttribute('aria-expanded',active);
+        if(active){event_2.currentTarget.setAttribute('aria-label', 'fechar Menu');
+    }else{
+        event_2.currentTarget.setAttribute('aria-label', 'Abrir Menu') ;
+       
+
+    }
+    }
+
+    btnMobile.addEventListener('click',toggleMenu);
+    btnMobile.addEventListener('touchstart',toggleMenu);
 
     // Click Menu:
-    clickMenu()
+    clickMenu() 
     function clickMenu(){
         const menuLinks = document.querySelectorAll('nav a[href^="#"]');
+    
 
         function getDistanceFromtheTop(element_1){
             const id = element_1.getAttribute("href");
+          
             return document.querySelector(id).offsetTop;
+            
         }
-
 
         function scrollToSection(event_1){
            event_1.preventDefault();
            const  distanceFromTheTop = getDistanceFromtheTop(event_1.target) - 200;
-        smoothScrollTo(0,distanceFromTheTop,)
-        
+        smoothScrollTo(0,distanceFromTheTop,); 
+    
         }
 
         menuLinks.forEach((link)=>{
@@ -60,35 +84,24 @@ window.onload = function(){
           }
 
     }   
-        
+           
+ //Controle de animação section Projects :
+ const debounce = function(func,wait,immediate){
+    let timeout;
+    return function(...args){
+        const context =this;
+        const later = function(){
+            timeout = null;
+            if(!immediate) func.apply(context,args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later,wait);
+        if(callNow) func.apply(context,args);
+    };
+};
 
-
-
-
-        const btnMobile = document.querySelector("#btn-mobile");
-
-        function toggleMenu(event_2){
-            if(event_2.type === 'touchstart ') event_2.preventDefault();
-               
-            
-            const nav = document.querySelector("nav");
-            nav.classList.toggle('active');
-            const active = nav.classList.contains('active');
-            event_2.currentTarget.setAttribute('aria-expanded',active);
-            if(active){event_2.currentTarget.setAttribute('aria-label', 'Fechar Menu');
-        }else{
-            event_2.currentTarget.setAttribute('aria-label', 'Abrir Menu') ;
-        }
-        }
-
-        btnMobile.addEventListener('click',toggleMenu);
-        btnMobile.addEventListener('touchstart',toggleMenu);
-   
- 
-
-    
-    //  Animation section Projects: 
-
+    //  Animation slider section Projects: 
     const target = document.querySelectorAll("[data-anime]");
     const animationClass = 'animate';
 
@@ -103,10 +116,14 @@ window.onload = function(){
         })
 
     }
+    animateScroll();
 
-    window.addEventListener('scroll',function(){
-        animateScroll();
-    });
+    if(target.length){
+        window.addEventListener('scroll',debounce(function(){
+            animateScroll();
+            console.log('teste')
+        },200));
+    }
 
 }
 

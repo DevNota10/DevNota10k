@@ -11,27 +11,19 @@
         <meta name="keywords" cantent="Portifólio,Kleber Gaspar,DevNota10K,">
         <meta name="author" content="Kleber Gaspar">
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>Portifólio</title>
 </head>
 <body>
     <header>
-        <div class="logo-emblema"></div><!--logo-->
+      
 
-        <div class="change-background">
-            <div class="box-ch-background">
-                <input type="checkbox" class="checkbox" name="check" id="check">
-                <label for="check">
-                    <i class="fas fa-sun"></i>
-                    <i class="fas fa-moon"></i>
-                    <div class="ball"></div>
-                
-                </label>
 
-            </div><!--box-ch-background-->
-
-        </div><!--chage-background-->
         <div class="container">
-            <div class="logo"></div><!--logo-->
+            <div class="logo-emblema"></div><!--logo-->
         
             <nav>
                 <button id="btn-mobile" aria-label= "Abrir Menu" aria-haspopup="true" aria-expanded="false">
@@ -41,14 +33,28 @@
 
                 <ul id="menu" role="menu">
 
-                    <li><a href="#home">Home</a></li>
+                    <!-- <li><a href="#home">Home</a></li> -->
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>      
         </div><!--container-->
     </header>
+
+    <div class="change-background">
+        <div class="box-ch-background">
+            <input type="checkbox" class="checkbox" name="check" id="check">
+            <label for="check">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+                <div class="ball"></div>
+            
+            </label>
+
+        </div><!--box-ch-background-->
+
+    </div><!--chage-background-->
 
     <section class="father" id="home" >
 
@@ -70,6 +76,7 @@
             
                         <div class="lang-skills">
                             <i class="fa-brands fa-git-alt"></i>
+                        
                         </div>
             
                         <div class="lang-skills">
@@ -80,9 +87,11 @@
             </div><!--box-skills-->
     
             <div class="container">
+
                 <div class="box-img-dev">
-                    <div class="img-dev"></div>
+                    <img src="./img/Dev_Kleber-img.png" alt="">
                 </div>
+
                 <div class="text-about-me text" >
                     <h1>Sobre</h1>
                     <p>
@@ -136,17 +145,16 @@
                             <button><a target="_blank" href="#">Repositório</a></button>
                         </div><!--text-project-->    
                         <div class="video-projects" data-anime="right"> Video</div><!--video-projects-->           
-                </div><!--container--->
-               
-                    
+                </div><!--container--->          
         </section><!--projects-->
-    
-      
-    
-      
-
-
         
+        <section class="contact" id="contact">
+            <h1>Contato</h1>
+            <div class="container">
+
+            </div><!--container-->
+
+        </section><!--contato-->
     </section><!--father-->
     
 

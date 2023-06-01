@@ -2,8 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #ede8e8;
+    color: #cdc4c4;
 
+    font-family: 'Poppins', sans-serif;
+
+    letter-spacing: 1.5px;
 }
 
 /* html{
@@ -11,14 +14,6 @@
     scroll-padding-top: 200px;
 } */
 
-body {
-    background: #080708;
-    transition: background 0.2s linear;
-}
-
-body.dark {
-    background: #ede8e8;
-}
 
 header {
     width: 100%;
@@ -29,22 +24,90 @@ header {
     z-index: 99;
 
 }
-
-header .change-background {
-    width: 100px;
-    height: 50px;
-    position: absolute;
-    top: 20px;
-    right: 2%;
+header .container{
+    flex-direction: column;
 }
 
-header .box-ch-background .checkbox {
+.container {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-emblema {
+    margin: 0 auto;
+    width: 150px;
+    height: 70px;
+ 
+    background-image: url(../img/Emblema-001.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+header nav #menu {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+}
+header nav a {
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    padding: 1rem;
+    transition: .5s;
+}
+
+header nav a:hover{
+    color: gray;
+    transition: .5s;
+}
+header nav a:active{
+    color: #720202;
+    transition: .2s;
+}
+
+#btn-mobile {
+    cursor: pointer;
+    padding: .5rem;
+    position: absolute;
+    right:0;
+    background: none;
+    border: 0;
+    display: none;
+}
+
+body {
+    background: #080708;
+    transition: background 0.2s linear;
+}
+
+body.dark {
+    background: #ede8e8;
+    transition: background 0.5s linear;
+}
+
+ .change-background {
+    width: 100px;
+    height: 50px;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    z-index: 99;
+}
+
+ .box-ch-background .checkbox {
     position: relative;
     opacity: 0;
 }
 
-
-header .box-ch-background label {
+ .box-ch-background label {
     width: 50px;
     height: 26px;
     display: flex;
@@ -54,16 +117,19 @@ header .box-ch-background label {
     padding: 5px;
 
     position: absolute;
-    background: #111;
+    background: #373535;
     border-radius: 50px;
     transform: scale(1.3);
+    right: 35px;
+   
+
 }
 
-header .box-ch-background .ball {
+ .box-ch-background .ball {
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background: #eb0e0e;
+    background:linear-gradient(50deg,#ff0000,#555454);
     position: absolute;
     top: 2px;
     left: 2px;
@@ -71,7 +137,7 @@ header .box-ch-background .ball {
     transition: transform 0.2s linear;
 }
 
-header .box-ch-background .checkbox:checked+label .ball {
+ .box-ch-background .checkbox:checked+label .ball {
     transform: translateX(24px);
 }
 
@@ -85,90 +151,35 @@ header .box-ch-background .checkbox:checked+label .ball {
 }
 
 
-.container {
-    max-width: 1400px;
-    height: 100%;
-    margin: 0 auto;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-header .logo {
-    width: 120px;
-    height: 80px;
-
-    background-image: url(../img/logo-dev.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
-
-}
-
-.logo-emblema {
-    margin: 0 auto;
-    width: 150px;
-    height: 100px;
-
-    background-image: url(../img/Emblema-001.png);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-}
-
-
-header nav #menu {
-    display: flex;
-    list-style-type: none;
-    gap: 40px;
-}
-
-header nav a {
-    display: block;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    padding: 1rem;
-}
-
-#btn-mobile {
-    cursor: pointer;
-    padding: .5rem;
-    position: absolute;
-    right: 2%;
-    background: none;
-    border: 0;
-    display: none;
-
-}
-
 /********************************* Start Sections **********************************/
 
 section.father {
     display: inline-block;
     width: 100%;
     padding: 0px 2%;
-    margin-top: 200px;
+    margin-top: 151px;
     overflow-x: hidden;
+    border: none;
 }
 
 section {
     margin-bottom: 100px;
+    border: 10px solid /*#333131*/;
+    padding:  20px;
+    border-image: url(../img/Emblema-001.png) 100 round;
 }
 
 h1 {
+    
     margin: 0 auto;
-    max-width: 1400px;
-    background: linear-gradient(45deg, #ff0000, #330101);
+    max-width: 200px;
+    /* background: linear-gradient(45deg, #ff0000, #330101); */
     text-align: center;
     padding: 10px;
     font-size: 30px;
     margin-bottom: 30px;
-    color: #080708;
+    color: #3b3939;
+   
 }
 
 h2 {
@@ -187,16 +198,20 @@ a {
     text-decoration: none;
     color: #b7b0b0;
 }
-
+img{
+    width: 100%;
+    height: 100%;
+}
 /*********************************  Section About-me **********************************/
 
 section.about-me .box-skills {
-    height: 60px;
+    position: relative;
+    margin-bottom: 60px;
 }
 
 section.about-me .box-skills>.container {
     justify-content: space-around;
-
+    padding: 20px;
 }
 
 section.about-me .lang-skills {
@@ -205,32 +220,42 @@ section.about-me .lang-skills {
     font-size: 40px;
     cursor: pointer;
     border-radius: 50%;
-    background: rgb(206, 12, 12);
+    background:linear-gradient(50deg,#ff0000,#555454);
+
 }
 
 section.about-me .box-img-dev {
     width: 400px;
-    height: 400px;
+    height: 500px;
+    position: relative;
 }
 
-section.about-me .box-img-dev .img-dev {
-    height: 100%;
-    width: 100%;
-    background-image: url(../img/img-dev.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+section.about-me .box-img-dev img {
+    opacity: .5;
+  
+    border-radius: 30%;
+    filter: drop-shadow(5px 5px 10px #555454);
+    transition: 1s;
 
+    animation: gradient 10s ease infinite ;
+    background: linear-gradient(-45deg, #555454,#050002,#e00720,#c9140a) no-repeat;
+    background-size: 60% 300%;
+
+}
+section.about-me .box-img-dev img:hover{
+    opacity: 1;   
 }
 
 section.about-me .text-about-me {
     width: 60%;
-    padding: 20px;
+    padding:0 20px;
     line-height: 30px;
 }
 
 /*********************************  Sections Projects **********************************/
-
+section.projects .container{
+    margin-bottom: 150px;
+}
 
 section.projects .text-project {
     width: 50%;
@@ -246,7 +271,7 @@ section.projects .video-projects {
 
 section.projects .text-project button {
     margin: 0 auto;
-    background: linear-gradient(#000, gray, #000);
+    background: linear-gradient(#000, #808080, #000);
     text-decoration: none;
     font-size: 20px;
     padding: 1rem;
@@ -258,6 +283,19 @@ section.projects .container:nth-child(even) {
     flex-direction: row-reverse;
 }
 
+/*********************************  Sections Contacts **********************************/
+
+section.contact{
+    height: 700px;
+    width: 100%;
+
+    animation: gradient 10s ease infinite ;
+    background: linear-gradient(-45deg, #ee7752,#e73c7e,#23a6d5,#23d5ab) no-repeat;
+    background-size: 300% 300%;  
+    
+}
+
+/* ----------------------------------------------------- */
 
 /* Animation section Projects */
 
@@ -279,45 +317,62 @@ section.projects .container:nth-child(even) {
     transform: translate3d(0px, 0px, 0px);
 
 }
+/* ----------------------------------------------------- */
+/* Animation Gradient */
+
+@keyframes gradient {
+    0%{
+        background-position: 0 50%;
+    }
+    
+    50%{
+        background-position: 100% 50%;
+    }
+    
+    100%{
+        background-position: 0 50%;
+    }
+    
+}
 
 /* Media Queries */
 
-@media screen and (max-width:650px) {
-
-
-    header .logo {
-        width: 100px;
-        height: 60px;
-
-    }
+@media screen and (max-width:700px) {
 
     .logo-emblema {
         margin: 0 auto;
         width: 100px;
         height: 100px;
-
     }
 
 
-    header .box-ch-background {
-        position: absolute;
-        right: 45px;
+    .change-background {
+        width: 100px;
+        height: 50px;
+        position: fixed;
+        top: 10px;
+        right: 0;
+        z-index: 99;
+        /* background: green; */
+    }
+
+    .box-ch-background label{
+        right:10px ;
     }
 
     header nav {
         position: relative;
-
-        /* display: none; */
+        width: 100%;
     }
 
     header nav #menu {
         display: block;
         position: absolute;
-        gap: 40px;
+
         width: 0px;
         height: 0;
         right: 0;
-        top: 40px;
+        top: 0px;
         text-align: center;
         background: linear-gradient(-45deg, #080708, #363535);
         transition: 1s;
@@ -346,7 +401,7 @@ section.projects .container:nth-child(even) {
         padding: .5rem;
         position: absolute;
         display: flex;
-        top: -10px;
+        top: -40px;
     }
 
     header #hamburguer {
@@ -363,7 +418,6 @@ section.projects .container:nth-child(even) {
         background: currentColor;
         margin-top: 5px;
         transition: 0.3s;
-
     }
 
     header nav.active #hamburguer {
@@ -382,7 +436,6 @@ section.projects .container:nth-child(even) {
         transform: rotate(-135deg);
 
     }
-
 
     /********************************* Media queries Section About-me **********************************/
 
@@ -405,7 +458,6 @@ section.projects .container:nth-child(even) {
 
     }
 
-
     section.about-me .lang-skills {
         width: 25px;
         height: 25px;
@@ -417,13 +469,11 @@ section.projects .container:nth-child(even) {
         width: 150px;
         height: 150px;
         transition: 1s;
-
     }
 
     section.about-me .text-about-me {
         width: 100%;
     }
-
 
 
     /********************************* Media queries Section Projects **********************************/
@@ -436,7 +486,6 @@ section.projects .container:nth-child(even) {
     section.projects .text-project {
         width: 100%;
         height: 100%;
-
     }
 
     section.projects .video-projects {
