@@ -47,7 +47,7 @@ window.onload = function(){
 
         function scrollToSection(event_1){
            event_1.preventDefault();
-           const  distanceFromTheTop = getDistanceFromtheTop(event_1.target) - 200;
+           const  distanceFromTheTop = getDistanceFromtheTop(event_1.target) - 170;
         smoothScrollTo(0,distanceFromTheTop,); 
     
         }
@@ -58,8 +58,8 @@ window.onload = function(){
         });
 
         function smoothScrollTo(endX, endY, duration) {
-            const startX = window.scrollX || window.pageXOffset;
-            const startY = window.scrollY || window.pageYOffset;
+            const startX = window.scrollX || window.scrollX;
+            const startY = window.scrollY || window.scrollY;
             const distanceX = endX - startX;
             const distanceY = endY - startY;
             const startTime = new Date().getTime();

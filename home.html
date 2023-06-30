@@ -14,16 +14,14 @@
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
     <title>Portifólio</title>
 </head>
 <body>
     <header>
-      
-
-
+    
         <div class="container">
-            <div class="logo-emblema"></div><!--logo-->
+            <div class="logo-emblema"></div>
         
             <nav>
                 <button id="btn-mobile" aria-label= "Abrir Menu" aria-haspopup="true" aria-expanded="false">
@@ -38,49 +36,48 @@
                     <li><a href="#projects">Projetos</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
-            </nav>      
+            </nav>  
+
+            <div class="change-background">
+                <div class="box-ch-background">
+                    <input type="checkbox" class="checkbox" name="check" id="check">
+                    <label for="check">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <div class="ball"></div>           
+                    </label>
+                </div><!--box-ch-background-->
+            </div><!--chage-background-->
+               
         </div><!--container-->
+   
     </header>
 
-    <div class="change-background">
-        <div class="box-ch-background">
-            <input type="checkbox" class="checkbox" name="check" id="check">
-            <label for="check">
-                <i class="fas fa-sun"></i>
-                <i class="fas fa-moon"></i>
-                <div class="ball"></div>
-            
-            </label>
-
-        </div><!--box-ch-background-->
-
-    </div><!--chage-background-->
-
-    <section class="father" id="home" >
+    <section class="father"  >
 
         <section class="about-me" id="about">
             <div class="box-skills">
                 <div class="container">
                     
                         <div class="lang-skills">
-                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands brands  fa-html5"></i>
                         </div>
             
                         <div class="lang-skills">
-                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands brands fa-css3-alt"></i>
                         </div>
             
                         <div class="lang-skills">
-                            <i class="fa-brands fa-js"></i>
+                            <i class="fa-brands brands fa-js"></i>
                         </div>
             
                         <div class="lang-skills">
-                            <i class="fa-brands fa-git-alt"></i>
+                            <i class="fa-brands brands fa-git-alt"></i>
                         
                         </div>
             
                         <div class="lang-skills">
-                           <i class="fa-brands fa-github"></i>
+                           <i class="fa-brands brands fa-github"></i>
                         </div>
     
                 </div><!--container-->
@@ -88,11 +85,11 @@
     
             <div class="container">
 
-                <div class="box-img-dev">
+                <div class="box-img-dev" data-anime="right">
                     <img src="./img/Dev_Kleber-img.png" alt="">
                 </div>
 
-                <div class="text-about-me text" >
+                <div class="text-about-me text" data-anime="left">
                     <h1>Sobre</h1>
                     <p>
                         Olá! Quero lhe apresentar meu portfólio, um compilado de projetos e trabalhos que desenvolvi ao longo da minha carreira.
@@ -104,7 +101,7 @@
                         Espero que meu portfólio possa ser útil para você. Sinta-se à vontade para explorá-lo e entrar em contato comigo caso tenha alguma dúvida ou interesse em algum dos meus serviços. Terei o maior prazer em ajudá-lo. Obrigado pela atenção!
                     </p>
                     
-                        <p>  AT.te: <i>Kleber Gaspar</i>  </p>
+                        <p>  AT.te: <i style="font-family: 'Dancing Script', cursive;border-bottom: 2px solid ;">Kleber Gaspar</i>  </p>
                 </div><!--text-about-me-->
             </div><!--container-->
         </section><!--about-me-->
@@ -151,15 +148,71 @@
         <section class="contact" id="contact">
             <h1>Contato</h1>
             <div class="container">
+                <form action="#">
+                    
+                    <div class="input-wrapper">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name">    
+                    </div><!--input-wrapper-->
+
+                    <div class="input-wrapper">
+                        <label for="email">E-mail:</label>
+                        <input type="text" name="email">    
+                    </div><!--input-wrapper-->
+
+                    <div class="input-wrapper">
+                        <label for="tel">Tel:</label>
+                        <input type="text" name="tel">    
+                    </div><!--input-wrapper-->
+                    <button>Enviar</button>
+
+          
+                </form>
 
             </div><!--container-->
 
         </section><!--contato-->
     </section><!--father-->
+
+    <footer>
+        <div class="container" style="grid-auto-flow: row dense">
+            <div class="item"> Todos os direitos reservados</div>
+
+            <div class="item">
+                <div class="logo-emblema">
+                    <img src="img/logo-2.png" alt="Logo">
+                </div>
+            </div>
+
+            <div class="item">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-discord"></i>
+            </div>
+            <div class="item"><p>Created by Kleber Gaspar - 2023 </p>
+                <i class="fa-solid fa-copyright"></i>   
+                      
+            </div>
+            
+        </div><!--container-->
+    </footer>
+    
     
 
+
+    <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+            VanillaTilt.init(document.querySelector(".box-img-dev"), {
+                max: 25,
+                speed: 400
+            });
+    </script>
+
     <script src="./js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 
 
 </body>
