@@ -217,7 +217,7 @@ function applyError(index){
   })
  })
 
-// textarea.style.backgroundColor=' red'
+
 
 // }
 
