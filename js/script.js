@@ -1,5 +1,5 @@
 
-window.onload = function(){
+// window.onload = function(){
 //  Change background-color :
     const changeBackground = document.querySelector(".box-ch-background #check")
     changeBackground.addEventListener('click',function(){
@@ -13,24 +13,18 @@ window.onload = function(){
 
     const btnMobile = document.querySelector("#btn-mobile");
 
-    function toggleMenu(event_2){
-        if(event_2.type === 'touchstart ') event_2.preventDefault();
-           
-        
+    function toggleMenu(event){ 
         const nav = document.querySelector("nav");
         nav.classList.toggle('active');
         const active = nav.classList.contains('active');
-        event_2.currentTarget.setAttribute('aria-expanded',active);
-        if(active){event_2.currentTarget.setAttribute('aria-label', 'fechar Menu');
+        event.currentTarget.setAttribute('aria-expanded',active);
+        if(active){event.currentTarget.setAttribute('aria-label', 'fechar Menu');
     }else{
-        event_2.currentTarget.setAttribute('aria-label', 'Abrir Menu') ;
-       
-
+        event.currentTarget.setAttribute('aria-label', 'Abrir Menu')    
     }
     }
 
     btnMobile.addEventListener('click',toggleMenu);
-    btnMobile.addEventListener('touchstart',toggleMenu);
 
     // Click Menu:
     clickMenu() 
@@ -100,7 +94,6 @@ window.onload = function(){
         if(callNow) func.apply(context,args);
     };
 };
-
     //  Animation slider section Projects: 
     const target = document.querySelectorAll("[data-anime]");
     const animationClass = 'animate';
@@ -121,11 +114,112 @@ window.onload = function(){
     if(target.length){
         window.addEventListener('scroll',debounce(function(){
             animateScroll();
-            console.log('teste')
+
         },200));
     }
 
+    // Validation de Form:
+   
+ const nome = document.querySelector("form #name");
+ const email = document.querySelector("form #email");
+ const tel = document.querySelector("form #tel");
+ const textarea = document.querySelector("form #msg")
+ const spans = document.querySelectorAll("form span");
+ const btnForm = document.querySelector("form #btn-form");
+
+btnForm.addEventListener("click",(e)=>{
+    
+    e.preventDefault()
+    
+    if(nameValidation(nome) == false){
+     applyError(nome)
+    }
+    else if(emailValidation(email) == false){
+        applyError(email)
+    }
+    else if(telValidation(tel) == false){
+        applyError(tel)
+    }
+    else if(textareaValidation(textarea) == false){
+        applyError(textarea)
+    }
+    
+    else{
+        alert('Mensagem enviado')
+    }
+
+});
+
+//Function to validation fields:
+function nameValidation(nome){
+  
+        const amount = nome.value.split(' ').length;
+        const splitStr = nome.value.split(' ');
+        if(nome == ''){
+            return false
+        }
+         if(amount >=2 ){
+            for( let i = 0 ; i < amount; i++ ){
+                if(splitStr[i].match(/^[A-Z]{1}[a-z]{1,}$/)){
+                    console.log('condição bateu')
+    
+                }else{
+                    return false;
+                }
+            }
+         }else{
+            console.log('não tem')
+
+            return false;
+         }
 }
+
+function emailValidation(email){
+  
+    if(email == ''){
+        return false;
+    }
+    if(email.value.match(/^([a-z0-9-_.]{1,})+@+([a-z.]{1,})$/) == null){
+        return false;
+    }
+    // return true;
+}
+
+function telValidation(tel){
+    if(tel == ''){
+        return false;
+    }
+    if(tel.value.match(/^[0-9]{2}[0-9]{5}[0-9]{4}$/) == null){
+    return false
+    }
+}
+/*
+CORRIGIR ERRO DE VALIDAÇÃO DO TEXT AREA
+function textareaValidation(textarea){
+if(textarea == ''){
+    return false 
+}
+    
+}
+*/
+//Function to show error:
+function applyError(index){
+    index.style.border='2px solid red';
+    index.value= '*Campo Inválido';
+    index.style.color="red";
+    
+ }
+ document.querySelectorAll("input[type=text]").forEach((index)=>{
+    index.addEventListener("focusin",()=>{
+    index.value='';
+    index.style.color="#000";
+    index.style.border ='none';
+  })
+ })
+
+// textarea.style.backgroundColor=' red'
+
+// }
 
 
 

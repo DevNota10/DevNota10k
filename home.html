@@ -11,6 +11,7 @@
         <meta name="keywords" cantent="Portifólio,Kleber Gaspar,DevNota10K,">
         <meta name="author" content="Kleber Gaspar">
         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/img/android-chrome-192x192.png" type="image/x-icon">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,7 +97,7 @@
     
                         Aqui você encontrará uma variedade de temas, desde artes gráficas, design de interiores, design de websites, arquitetura, entre outros. Cada projeto foi executado com muito cuidado e atenção aos detalhes, sempre buscando agregar valor ao cliente e trazer soluções criativas.
     
-                        No meu portfólio, você poderá verificar a qualidade do meu trabalho e também conferir minha evolução profissional ao longo do tempo. Nele, apresento desde trabalhos mais simples até os mais complexos, mostrando minha capacidade de adaptar-me à diferentes demandas e necessidades dos clientes.
+                        Nete portfólio, você poderá verificar a qualidade do meu trabalho e também conferir minha evolução profissional ao longo do tempo. Nele, apresento desde trabalhos mais simples até os mais complexos, mostrando minha capacidade de adaptar-me à diferentes demandas e necessidades dos clientes.
     
                         Espero que meu portfólio possa ser útil para você. Sinta-se à vontade para explorá-lo e entrar em contato comigo caso tenha alguma dúvida ou interesse em algum dos meus serviços. Terei o maior prazer em ajudá-lo. Obrigado pela atenção!
                     </p>
@@ -115,7 +116,9 @@
                                 <p>Neste projeto as tecnologias aproveitadas foram, HTML, CSS e JavaScript. Este projeto é responsível, pois optei por utilizar  as propriedades do flex-box. Confira os código no botão abaixo.</p>
                                 <button><a target="_blank" href="https://github.com/DevNota10/Projeto-site-saude-e-bem-estar">Repositório</a></button>
                             </div><!--text-project-->    
-                            <div class="video-projects" data-anime="left"> Video</div><!--video-projects-->           
+                            <div class="video-projects" data-anime="left"> Video
+                                <img src="/img/maintenance-2422171_1280.jpg" alt="img-Site-em-manutenção">
+                            </div><!--video-projects-->           
                     </div><!--container--->
 
                     <div class="container">   
@@ -124,7 +127,9 @@
                                 <p>Neste projeto as tecnologias aproveitadas foram, HTML, CSS e JavaScript. Este projeto é responsível, pois optei por utilizar  as propriedades do flex-box. Confira os código no botão abaixo.</p>
                                 <button><a target="_blank" href="#">Repositório</a></button>
                             </div><!--text-project-->    
-                            <div class="video-projects" data-anime="right"> Video</div><!--video-projects-->           
+                            <div class="video-projects" data-anime="right"> Video
+                                <img src="/img/maintenance-2422171_1280.jpg" alt="img-Site-em-manutenção">
+                            </div><!--video-projects-->           
                     </div><!--container--->
 
                     <div class="container">   
@@ -133,7 +138,7 @@
                             <p>Neste projeto as tecnologias aproveitadas foram, HTML, CSS e JavaScript. Este projeto é responsível, pois optei por utilizar  as propriedades do flex-box. Confira os código no botão abaixo.</p>
                             <button><a target="_blank" href="#">Repositório</a></button>
                         </div><!--text-project-->    
-                        <div class="video-projects" data-anime="left"> Video</div><!--video-projects-->           
+                        <div class="video-projects" data-anime="left">Video <img src="/img/maintenance-2422171_1280.jpg" alt="img-Site-em-manutenção"></div><!--video-projects-->           
                 </div><!--container--->
                 <div class="container">   
                         <div class="text-project text" data-anime="left">
@@ -141,32 +146,43 @@
                             <p>Neste projeto as tecnologias aproveitadas foram, HTML, CSS e JavaScript. Este projeto é responsível, pois optei por utilizar  as propriedades do flex-box. Confira os código no botão abaixo.</p>
                             <button><a target="_blank" href="#">Repositório</a></button>
                         </div><!--text-project-->    
-                        <div class="video-projects" data-anime="right"> Video</div><!--video-projects-->           
+                        <div class="video-projects" data-anime="right"> Video
+                            <img src="/img/maintenance-2422171_1280.jpg" alt="img-Site-em-manutenção">
+                        </div><!--video-projects-->           
                 </div><!--container--->          
         </section><!--projects-->
         
         <section class="contact" id="contact">
+
             <h1>Contato</h1>
             <div class="container">
-                <form action="#">
+                <form id="form" >
                     
                     <div class="input-wrapper">
                         <label for="name">Name:</label>
-                        <input type="text" name="name">    
+                        <span>Nome deve ter no mínimo 3 caracteres</span>
+                        <input type="text" name="name" id="name" placeholder="Nome Sobrenome"  >
+                              
                     </div><!--input-wrapper-->
 
                     <div class="input-wrapper">
                         <label for="email">E-mail:</label>
-                        <input type="text" name="email">    
+                        <input type="text" name="email" id="email"   > 
+                       
                     </div><!--input-wrapper-->
 
                     <div class="input-wrapper">
                         <label for="tel">Tel:</label>
-                        <input type="text" name="tel">    
+                        <input type="text" name="tel" id="tel" placeholder="(11) 90000-0000"  >    
                     </div><!--input-wrapper-->
-                    <button>Enviar</button>
 
-          
+                    <div class="input-wrapper">
+                        <label for="mensagem" required>Msg:</label>
+                       <textarea name="msg" id="msg"  rows="10"></textarea>    
+                    </div><!--input-wrapper-->
+                    
+                    <button id="btn-form">Enviar</button>
+
                 </form>
 
             </div><!--container-->
@@ -185,9 +201,9 @@
             </div>
 
             <div class="item">
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-github"></i>
-                <i class="fa-brands fa-discord"></i>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://github.com/devnota10"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
             </div>
             <div class="item"><p>Created by Kleber Gaspar - 2023 </p>
                 <i class="fa-solid fa-copyright"></i>   
@@ -197,8 +213,6 @@
         </div><!--container-->
     </footer>
     
-    
-
 
     <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
     <script type="text/javascript">
