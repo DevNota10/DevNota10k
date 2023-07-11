@@ -1,5 +1,5 @@
 
-// window.onload = function(){
+window.onload = function(){
 //  Change background-color :
     const changeBackground = document.querySelector(".box-ch-background #check")
     changeBackground.addEventListener('click',function(){
@@ -219,7 +219,7 @@ function applyError(index){
 
 
 
-// }
+}
 
 
 

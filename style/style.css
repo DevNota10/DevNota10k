@@ -18,7 +18,7 @@ header {
     max-height: 100%;
     position: fixed;
     z-index: 99;
-
+   
 }
 
 header .container {
@@ -28,6 +28,7 @@ header .container {
     background: linear-gradient(-45deg, #00b0ff 40%, #7c4dff, #d500f9, #f50057);
     animation: gradient 10s ease-in-out infinite;
     background-size: 300% 300%;
+    box-shadow: -5px 5px 2px  #484545;
 }
 
 .container {
@@ -79,10 +80,12 @@ header nav a:active {
     cursor: pointer;
     padding: .5rem;
     position: absolute;
-    right: 0;
+
     background: none;
     border: 0;
     display: none;
+    top: -30px;
+    right:7px ;
 }
 
 body {
@@ -257,10 +260,8 @@ section.about-me .box-img-dev {
 }
 
 section.about-me .box-img-dev img {
-
     border-radius: 30%;
-    filter: drop-shadow(5px 5px 10px #555454);
-
+    filter: drop-shadow(-5px 5px 10px #484545);
 
     animation: gradient 10s ease-in-out infinite;
     background: linear-gradient(-45deg, #00b0ff 60%, #d500f9, #1e88e5) no-repeat;
@@ -439,7 +440,7 @@ footer .item p {
 
 [data-anime] {
     opacity: 0;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 [data-anime="left"] {
@@ -449,11 +450,13 @@ footer .item p {
 [data-anime="right"] {
     transform: translate3d(-100px, 0px, 0px);
 }
+[data-anime="top"] {
+    transform: translate3d(0px, -100px, 0px);
+}
 
 [data-anime].animate {
     opacity: 1;
     transform: translate3d(0px, 0px, 0px);
-
 }
 
 /* ----------------------------------------------------- */
@@ -529,7 +532,7 @@ footer .item p {
         padding: .5rem;
         position: absolute;
         display: flex;
-        top: 0px;
+     
     }
 
     header #hamburguer {
