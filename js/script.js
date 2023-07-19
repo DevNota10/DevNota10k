@@ -13,10 +13,10 @@ window.onload = function(){
 
     const btnMobile = document.querySelector("#btn-mobile");
 
+    const nav = document.querySelector("nav");
     function toggleMenu(event){ 
-        const nav = document.querySelector("nav");
         nav.classList.toggle('active');
-        const active = nav.classList.contains('active');
+        const active = nav.classList.contains('active'); 
         event.currentTarget.setAttribute('aria-expanded',active);
         if(active){event.currentTarget.setAttribute('aria-label', 'fechar Menu');
     }else{
@@ -31,18 +31,17 @@ window.onload = function(){
     function clickMenu(){
         const menuLinks = document.querySelectorAll('nav a[href^="#"]');
     
-
         function getDistanceFromtheTop(element_1){
             const id = element_1.getAttribute("href");
           
-            return document.querySelector(id).offsetTop;
-            
+            return document.querySelector(id).offsetTop;     
         }
 
         function scrollToSection(event_1){
            event_1.preventDefault();
-           const  distanceFromTheTop = getDistanceFromtheTop(event_1.target) - 170;
+           const  distanceFromTheTop = getDistanceFromtheTop(event_1.target) - 90;
         smoothScrollTo(0,distanceFromTheTop,); 
+        nav.classList.toggle('active');
     
         }
 

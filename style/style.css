@@ -49,6 +49,7 @@ header .container {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    /* mix-blend-mode: color-burn; */
 }
 
 header nav #menu {
@@ -84,7 +85,7 @@ header nav a:active {
     background: none;
     border: 0;
     display: none;
-    top: -30px;
+    top: -50px;
     right:7px ;
 }
 
@@ -190,7 +191,8 @@ h1 {
     padding: 10px;
     font-size: 30px;
     margin-bottom: 30px;
-    color: #3b3939;
+    /* color: #3b3939; */
+    color: #0f0;
 
 }
 
@@ -249,31 +251,28 @@ section.about-me .lang-skills {
 
 section.about-me .brands {
     color: #000;
-
 }
 
 section.about-me .box-img-dev {
-    width: 400px;
-    height: 500px;
+    width: 30%;
+    max-height: 30%;
     position: relative;
     cursor: pointer;
 }
 
 section.about-me .box-img-dev img {
-    border-radius: 30%;
+    border-radius: 20%;
     filter: drop-shadow(-5px 5px 10px #484545);
 
     animation: gradient 10s ease-in-out infinite;
     background: linear-gradient(-45deg, #00b0ff 60%, #d500f9, #1e88e5) no-repeat;
     background-size: 300% 300%;
-
 }
 
 section.about-me .text-about-me {
-    width: 60%;
+    width: 70%;
     padding: 0 20px;
     line-height: 40px;
-
 }
 
 /*********************************  Sections Projects **********************************/
@@ -529,10 +528,7 @@ footer .item p {
     }
 
     header #btn-mobile {
-        padding: .5rem;
-        position: absolute;
         display: flex;
-     
     }
 
     header #hamburguer {
@@ -622,15 +618,5 @@ footer .item p {
         height: 400px;
 
     }
-
-    section.projects .text-project button {
-        margin: 0 auto;
-        background: linear-gradient(#000, gray);
-        text-decoration: none;
-        font-size: 20px;
-        padding: 1rem;
-
-    }
-
 
 }

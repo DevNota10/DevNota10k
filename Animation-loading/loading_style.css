@@ -13,6 +13,7 @@ body{
     justify-content: center;
     min-height: 100vh;
     background: linear-gradient(-45deg, #00b0ff 40%, #7c4dff, #d500f9, #f50057);
+    animation: animateOpacyt ease-in-out 2s infinite;
 
 }
 .container{
@@ -24,11 +25,11 @@ body{
     align-items: center;
 }
 h1{
-    font-size: 12vw;
+    font-size: 10vw;
     line-height: 1em;
     z-index: 1000;
     font-weight:900;
-    background: linear-gradient(75deg,#000 30%,#7c4dff,#fff,#4a148c );
+    background: linear-gradient(75deg,#0f0 20%,#7c4dff,#fff,#4a148c );
     -webkit-background-clip: text;
     -webkit-text-fill-color:transparent; 
     animation: expand-h1 ease-in-out 2s infinite; 
@@ -38,16 +39,19 @@ h1 span{
     letter-spacing: 0.4em;
     font-weight: 400;
     text-shadow: 5px 3px 5px #000;
-   
-    
+    /* #7b1fa2 */
 
+   
 }
 .blocks{
     position: absolute;
     width: 50px;
-    height: 100px;
-    background:linear-gradient(#7b1fa2,#000000a1) ;
-    box-shadow: 10px 10px 50px #f50057
+    height: 50px;
+    background:linear-gradient(#ffff,blue,#000000a1,#00bfff) ;
+    box-shadow: 10px 10px 50px #f50057;
+
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  
 }
 
 @keyframes expand-h1  {
@@ -56,6 +60,17 @@ h1 span{
     }
     50%{
         transform: scale(1.5);
+    }
+    
+}
+@keyframes animateOpacyt  {
+    0%,100%{
+      
+        background: #000;
+    }
+    50%{
+     
+        background: linear-gradient(-45deg, #00b0ff 40%, #7c4dff, #d500f9, #f50057);
     }
     
 }
