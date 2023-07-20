@@ -1,228 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
 
-        <!-- Tags para SEO  -->
-        <meta name="description" content="Protifólio devNota10,conhecendo os projetos">
-        <meta name="keywords" cantent="Portifólio,Kleber Gaspar,DevNota10K,">
-        <meta name="author" content="Kleber Gaspar">
-        <link rel="shortcut icon" href="./img/android-chrome-192x192.png" type="image/x-icon">
+    <!-- Tags para SEO  -->
+    <meta
+      name="description"
+      content="Protifólio devNota10,conhecendo os projetos"
+    />
+    <meta name="keywords" cantent="Portifólio,Kleber Gaspar,DevNota10K," />
+    <meta name="author" content="Kleber Gaspar" />
+    <link
+      rel="shortcut icon"
+      href="./img/android-chrome-192x192.png"
+      type="image/x-icon"
+    />
 
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Open+Sans:wght@300;600&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+
+
     <title>Portifólio</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-    
-        <div class="container">
-            <div class="logo-emblema"></div>
-        
-            <nav>
-                <button id="btn-mobile" aria-label= "Abrir Menu" aria-haspopup="true" aria-expanded="false">
-                    <span id="hamburguer"></span>
+      <div class="container">
+        <div class="logo-emblema"></div>
 
-                </button>
+        <nav>
+          <button
+            id="btn-mobile"
+            aria-label="Abrir Menu"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span id="hamburguer"></span>
+          </button>
 
-                <ul id="menu" role="menu">
+          <ul id="menu" role="menu">
+            <!-- <li><a href="#home">Home</a></li> -->
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
 
-                    <!-- <li><a href="#home">Home</a></li> -->
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>  
-
-            <div class="change-background">
-                <div class="box-ch-background">
-                    <input type="checkbox" class="checkbox" name="check" id="check">
-                    <label for="check">
-                        <i class="fas fa-sun"></i>
-                        <i class="fas fa-moon"></i>
-                        <div class="ball"></div>           
-                    </label>
-                </div><!--box-ch-background-->
-            </div><!--chage-background-->
-               
-        </div><!--container-->
-   
+        <div class="change-background">
+          <div class="box-ch-background">
+            <input type="checkbox" class="checkbox" name="check" id="check" />
+            <label for="check">
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
+          <!--box-ch-background-->
+        </div>
+        <!--chage-background-->
+      </div>
+      <!--container-->
     </header>
 
-    <section class="father"  >
+    <section class="father">
+      <section class="about-me" id="about">
+        <div class="box-skills">
+          <div class="container">
+            <div class="lang-skills">
+              <i class="fa-brands brands fa-html5"></i>
+            </div>
 
-        <section class="about-me" id="about">
-            <div class="box-skills">
-                <div class="container">
-                    
-                        <div class="lang-skills">
-                            <i class="fa-brands brands  fa-html5"></i>
-                        </div>
-            
-                        <div class="lang-skills">
-                            <i class="fa-brands brands fa-css3-alt"></i>
-                        </div>
-            
-                        <div class="lang-skills">
-                            <i class="fa-brands brands fa-js"></i>
-                        </div>
-            
-                        <div class="lang-skills">
-                            <i class="fa-brands brands fa-git-alt"></i>
-                        
-                        </div>
-            
-                        <div class="lang-skills">
-                           <i class="fa-brands brands fa-github"></i>
-                        </div>
-    
-                </div><!--container-->
-            </div><!--box-skills-->
-    
-            <div class="container">
+            <div class="lang-skills">
+              <i class="fa-brands brands fa-css3-alt"></i>
+            </div>
 
-                <div class="box-img-dev" data-anime="right">
-                    <img src="./img/Dev_Kleber-img.png" alt="">
-                </div>
+            <div class="lang-skills">
+              <i class="fa-brands brands fa-js"></i>
+            </div>
 
-                <div class="text-about-me text" data-anime="left">
-                    <h1>Sobre</h1>
-                    <p>
-                        Olá! Quero lhe apresentar meu portfólio, um compilado de projetos e trabalhos que desenvolvi ao longo da minha carreira.   
-                        Aqui você encontrará uma variedade de temas, desde artes gráficas, design de interiores, design de websites, arquitetura, entre outros. Cada projeto foi executado com muito cuidado e atenção aos detalhes, sempre buscando agregar valor ao cliente e trazer soluções criativas.
-                    </p>
-                    <p>
-                        Neste portfólio, você poderá verificar a qualidade do meu trabalho e também conferir minha evolução profissional ao longo do tempo. Nele, apresento desde trabalhos mais simples até os mais complexos, mostrando minha capacidade de adaptar-me à diferentes demandas e necessidades dos clientes.
-    
-                        Espero que meu portfólio possa ser útil para você. Sinta-se à vontade para explorá-lo e entrar em contato comigo caso tenha alguma dúvida ou interesse em algum dos meus serviços. Terei o maior prazer em ajudá-lo. Obrigado pela atenção!
-                    </p>
-                    
-                        <p>  AT.te: <i style="font-family: 'Dancing Script', cursive;border-bottom: 2px solid ;">Kleber Gaspar</i>  </p>
+            <div class="lang-skills">
+              <i class="fa-brands brands fa-git-alt"></i>
+            </div>
 
-                </div><!--text-about-me-->
-            </div><!--container-->
-        </section><!--about-me-->
-    
-        <section class="projects" id="projects">
-       
-            <h1>Projetos</h1>
-                    <div class="container">   
-                            <div class="text-project text" data-anime="right">
-                                <h2>Tema Saúde e bem-estar</h2>
-                                <p>Neste projeto as tecnologias aproveitadas foram, HTML, CSS e JavaScript. É um site responsivo, pois optei por utilizar  as propriedades do flex-box. Confira os código no botão abaixo.</p>
-                                <button><a target="_blank" href="https://github.com/DevNota10/Projeto-site-saude-e-bem-estar">Repositório</a></button>
-                            </div><!--text-project-->    
-                            <div class="video-projects" data-anime="left">
-                                <video src="./videos/Site-Tema -Saúde.mkv" type="video/mp4" width="100%" height="100%" controls></video>
+            <div class="lang-skills">
+              <i class="fa-brands brands fa-github"></i>
+            </div>
+          </div>
+          <!--container-->
+        </div>
+        <!--box-skills-->
 
-                             
-                            </div><!--video-projects-->           
-                    </div><!--container--->
+        <div class="container">
+          <div class="box-img-dev" data-anime="right">
+            <img src="./img/Dev_Kleber-img.png" alt="" />
+          </div>
 
-                    <div class="container">   
-                            <div class="text-project text" data-anime="left">
-                                <h2>Tema Saúde e bem-estar</h2>
-                                <p>Neste projeto as tecnologias aproveitadas foram, HTML, CSS e JavaScript. Este projeto é responsível, pois optei por utilizar  as propriedades do flex-box. Confira os código no botão abaixo.</p>
-                                <button><a target="_blank" href="#">Repositório</a></button>
-                            </div><!--text-project-->    
-                            <div class="video-projects" data-anime="right"> Video
-                                <img src="./img/maintenance-2422171_1280.jpg" alt="img-Site-em-manutenção">
-                            </div><!--video-projects-->           
-                    </div><!--container--->
+          <div class="text-about-me text" data-anime="left">
+            <h1>Sobre</h1>
+            <p>
+              Olá! Quero lhe apresentar meu portfólio, um compilado de projetos
+              e trabalhos que desenvolvi ao longo da minha carreira. Aqui você
+              encontrará uma variedade de temas, desde artes gráficas, design de
+              interiores, design de websites, arquitetura, entre outros. Cada
+              projeto foi executado com muito cuidado e atenção aos detalhes,
+              sempre buscando agregar valor ao cliente e trazer soluções
+              criativas.
+            </p>
+            <p>
+              Neste portfólio, você poderá verificar a qualidade do meu trabalho
+              e também conferir minha evolução profissional ao longo do tempo.
+              Nele, apresento desde trabalhos mais simples até os mais
+              complexos, mostrando minha capacidade de adaptar-me à diferentes
+              demandas e necessidades dos clientes. Espero que meu portfólio
+              possa ser útil para você. Sinta-se à vontade para explorá-lo e
+              entrar em contato comigo caso tenha alguma dúvida ou interesse em
+              algum dos meus serviços. Terei o maior prazer em ajudá-lo.
+              Obrigado pela atenção!
+            </p>
 
-                    <div class="container">   
-                        <div class="text-project text" data-anime="right">
-                            <h2>Tema Saúde e bem-estar</h2>
-                            <p>Neste projeto as tecnologias aproveitadas foram, HTML, CSS e JavaScript. Este projeto é responsível, pois optei por utilizar  as propriedades do flex-box. Confira os código no botão abaixo.</p>
-                            <button><a target="_blank" href="#">Repositório</a></button>
-                        </div><!--text-project-->    
-                        <div class="video-projects" data-anime="left">Video <img src="./img/maintenance-2422171_1280.jpg" alt="img-Site-em-manutenção"></div><!--video-projects-->           
-                </div><!--container--->
-                <div class="container">   
-                        <div class="text-project text" data-anime="left">
-                            <h2>Tema Saúde e bem-estar</h2>
-                            <p>Neste projeto as tecnologias aproveitadas foram, HTML, CSS e JavaScript. Este projeto é responsível, pois optei por utilizar  as propriedades do flex-box. Confira os código no botão abaixo.</p>
-                            <button><a target="_blank" href="#">Repositório</a></button>
-                        </div><!--text-project-->    
-                        <div class="video-projects" data-anime="right"> Video
-                            <img src="./img/maintenance-2422171_1280.jpg" alt="img-Site-em-manutenção">
-                        </div><!--video-projects-->           
-                </div><!--container--->          
-        </section><!--projects-->
-        
-        <section class="contact" id="contact">
+            <p>
+              AT.te:
+              <i
+                style="
+                  font-family: 'Dancing Script', cursive;
+                  border-bottom: 2px solid;
+                "
+                >Kleber Gaspar</i
+              >
+            </p>
+          </div>
+          <!--text-about-me-->
+        </div>
+        <!--container-->
+      </section>
+      <!--about-me-->
 
-            <h1>Contato</h1>
-            <div class="container">
-                <form id="form" data-anime="top" >expandiradicionado
-                    
-                    <div class="input-wrapper">
-                        <label for="name">Name:</label>
-                        <span>Nome deve ter no mínimo 3 caracteres</span>
-                        <input type="text" name="name" id="name" placeholder="Nome Sobrenome"  >
-                              
-                    </div><!--input-wrapper-->
+      <section class="projects" id="projects">
+        <h1>Projetos</h1>
+        <div class="container">
+          <div class="text-project text" data-anime="right">
+            <h2> Saúde e bem-estar</h2>
+            <p>
+                O projeto Saúde e Bem-Estar foi um dos primeiros projetos realizados e é motivo de orgulho para mim. Ele foi desenvolvido com o objetivo de compartilhar informações úteis sobre saúde e bem-estar, e fornecer recursos práticos para ajudar as pessoas a adotarem hábitos mais saudáveis.
+                Desenvolvido com as ferramentas HTML, CSS e JavaScript, este projeto é um exemplo de como a tecnologia pode ser utilizada para apoiar e incentivar um estilo de vida saudável.
 
-                    <div class="input-wrapper">
-                        <label for="email">E-mail:</label>
-                        <input type="text" name="email" id="email"   > 
-                       
-                    </div><!--input-wrapper-->
+            </p>
+            <p>
+                Este projeto é uma ótima oportunidade para os iniciantes em programação praticarem suas habilidades e aprenderem sobre o desenvolvimento web. Ao explorar o código-fonte, você terá a chance de entender como as diferentes tecnologias são utilizadas em conjunto para criar uma aplicação funcional.
 
-                    <div class="input-wrapper">
-                        <label for="tel">Tel:</label>
-                        <input type="text" name="tel" id="tel" placeholder="(11) 90000-0000"  >    
-                    </div><!--input-wrapper-->
+            </p>
 
-                    <div class="input-wrapper">
-                        <label for="mensagem" required>Msg:</label>
-                       <textarea name="msg" id="msg"  rows="10"></textarea>    
-                    </div><!--input-wrapper-->
-                    
-                    <button id="btn-form">Enviar</button>
 
-                </form>
+            <button>
+              <a
+                target="_blank"
+                href="https://github.com/DevNota10/Projeto-site-saude-e-bem-estar"
+                >Repositório</a
+              >
+            </button>
+          </div>
+          <!--text-project-->
+          <div class="video-projects" data-anime="left">
+            <video
+              src="./videos/Site-Tema -Saúde.mkv"
+              type="video/mp4"
+              width="100%"
+              height="100%"
+              controls
+            ></video>
+          </div>
+          <!--video-projects-->
+        </div>
+        <!--container--->
 
-            </div><!--container-->
+        <div class="container">
+          <div class="text-project text" data-anime="left">
+            <h2>To Do List</h2>
+            <p>
+                O projeto To Do List, elaborado por Rodolfo Mori, é um desafio emocionante e educativo especialmente criado para programadores iniciantes. Este desafio tem como objetivo desenvolver uma lista de tarefas interativa, onde os usuários podem adicionar, visualizar e marcar tarefas como concluídas.
 
-        </section><!--contato-->
-    </section><!--father-->
+                O projeto To Do List é uma ótima oportunidade para os programadores iniciantes praticarem suas habilidades de programação e aprimorarem seus conhecimentos. Ao participar deste desafio, os programadores terão a chance de trabalhar em um projeto real, aplicando conceitos e técnicas aprendidas durante seus estudos.
+                
+                O código-fonte completo do projeto To Do List está disponível no repositório do GitHub. Para acessá-lo, basta clicar no botão abaixo e você será direcionado ao repositório. Lá, você encontrará todas as informações necessárias para começar a trabalhar neste desafio.
+            </p>
+            <button><a target="_blank" href="https://github.com/DevNota10/ToDoList">Repositório</a></button>
+          </div>
+          <!--text-project-->
+          <div class="video-projects" data-anime="right">
+            <video
+              src="./videos/To Do List - Google Chrome 2023-07-19 19-33-10.mp4"
+              type="video/mp4"
+              width="100%"
+              height="100%"
+              controls
+            ></video>
+          </div>
+          <!--video-projects-->
+        </div>
+        <!--container--->
+
+        <div class="container">
+          <div class="text-project text" data-anime="right">
+            <h2>Tema Saúde e bem-estar</h2>
+            <p>
+              Neste projeto as tecnologias aproveitadas foram, HTML, CSS e
+              JavaScript. Este projeto é responsível, pois optei por utilizar as
+              propriedades do flex-box. Confira os código no botão abaixo.
+            </p>
+            <button><a target="_blank" href="#">Repositório</a></button>
+          </div>
+          <!--text-project-->
+          <div class="video-projects" data-anime="left">
+            Video
+            <img
+              src="./img/maintenance-2422171_1280.jpg"
+              alt="img-Site-em-manutenção"
+            />
+          </div>
+          <!--video-projects-->
+        </div>
+        <!--container--->
+        <div class="container">
+          <div class="text-project text" data-anime="left">
+            <h2>Tema Saúde e bem-estar</h2>
+            <p>
+              Neste projeto as tecnologias aproveitadas foram, HTML, CSS e
+              JavaScript. Este projeto é responsível, pois optei por utilizar as
+              propriedades do flex-box. Confira os código no botão abaixo.
+            </p>
+            <button><a target="_blank" href="#">Repositório</a></button>
+          </div>
+          <!--text-project-->
+          <div class="video-projects" data-anime="right">
+            Video
+            <img
+              src="./img/maintenance-2422171_1280.jpg"
+              alt="img-Site-em-manutenção"
+            />
+          </div>
+          <!--video-projects-->
+        </div>
+        <!--container--->
+      </section>
+      <!--projects-->
+
+      <section class="contact" id="contact">
+        <h1>Contato</h1>
+        <div class="container">
+          <form id="form" data-anime="top">
+            expandiradicionado
+
+            <div class="input-wrapper">
+              <label for="name">Name:</label>
+              <span>Nome deve ter no mínimo 3 caracteres</span>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Nome Sobrenome"
+              />
+            </div>
+            <!--input-wrapper-->
+
+            <div class="input-wrapper">
+              <label for="email">E-mail:</label>
+              <input type="text" name="email" id="email" />
+            </div>
+            <!--input-wrapper-->
+
+            <div class="input-wrapper">
+              <label for="tel">Tel:</label>
+              <input
+                type="text"
+                name="tel"
+                id="tel"
+                placeholder="(11) 90000-0000"
+              />
+            </div>
+            <!--input-wrapper-->
+
+            <div class="input-wrapper">
+              <label for="mensagem" required>Msg:</label>
+              <textarea name="msg" id="msg" rows="10"></textarea>
+            </div>
+            <!--input-wrapper-->
+
+            <button id="btn-form">Enviar</button>
+          </form>
+        </div>
+        <!--container-->
+      </section>
+      <!--contato-->
+    </section>
+    <!--father-->
 
     <footer>
-        <div class="container" style="grid-auto-flow: row dense">
-            <div class="item"> Todos os direitos reservados</div>
+      <div class="container" style="grid-auto-flow: row dense">
+        <div class="item">Todos os direitos reservados</div>
 
-            <div class="item">
-                <div class="logo-emblema">
-                    <img src="./img/logo-2.png" alt="Logo">
-                </div>
-            </div>
+        <div class="item">
+          <div class="logo-emblema">
+            <img src="./img/logo-2.png" alt="Logo" />
+          </div>
+        </div>
 
-            <div class="item">
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://github.com/devnota10"><i class="fa-brands fa-github"></i></a>
-                <a href="#"><i class="fa-brands fa-discord"></i></a>
-            </div>
-            <div class="item"><p>Created by Kleber Gaspar - 2023 </p>
-                <i class="fa-solid fa-copyright"></i>   
-                      
-            </div>
-            
-        </div><!--container-->
+        <div class="item">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://github.com/devnota10" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="#"><i class="fa-brands fa-discord"></i></a>
+        </div>
+        <div class="item">
+          <p>Created by Kleber Gaspar - 2023</p>
+          <i class="fa-solid fa-copyright"></i>
+        </div>
+      </div>
+      <!--container-->
     </footer>
-    
 
     <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
     <script type="text/javascript">
-            VanillaTilt.init(document.querySelector(".box-img-dev"), {
-                max: 25,
-                speed: 400
-            });
+      VanillaTilt.init(document.querySelector(".box-img-dev"), {
+        max: 25,
+        speed: 400,
+      });
     </script>
 
     <script src="./js/script.js"></script>
@@ -230,7 +342,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-
-
-</body>
+  </body>
 </html>
