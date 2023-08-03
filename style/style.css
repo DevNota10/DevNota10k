@@ -31,6 +31,7 @@ header .container {
     background: linear-gradient(-45deg, #00b0ff 40%, #7c4dff, #d500f9, #f50057);
     animation: gradient 10s ease-in-out infinite;
     background-size: 300% 300%;
+    border-radius: 10px;
 }
 
 .container {
@@ -51,6 +52,7 @@ header .container {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 10px;
 }
 
 header nav #menu {
@@ -83,7 +85,7 @@ header nav a:active {
     background: none;
     border: 0;
     display: none;
-    top: -50px;
+    top: -60px;
     right: 7px;
 }
 
@@ -111,6 +113,7 @@ body.dark {
     width: 50px;
     height: 26px;
     display: flex;
+   
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
@@ -192,7 +195,7 @@ h2 {
 }
 
 p {
-    font-size: 19px;
+    /* font-size: 19px; */
     text-align: justify;
     font-weight: normal;
     font-size: 17px;
@@ -271,7 +274,7 @@ section.projects .video-projects {
     background: #1f221f;
 }
 
-section.projects .text-project button {
+ button {
     margin: 20px auto;
 
     background: linear-gradient(-45deg, #00b0ff 40%, #7c4dff, #d500f9, #f50057);
@@ -281,6 +284,7 @@ section.projects .text-project button {
     font-size: 20px;
     padding: 0.5rem;
     border: 0;
+    border-radius: 5px;
 
 }
 
@@ -322,15 +326,13 @@ section.contact form input {
     width: 100%;
     padding: 5px;
     margin-bottom: 20px;
-    outline: none
+    outline: none;
+    border-radius: 5px;
 }
 
-section.contact form span {
-    display: none;
-    color: red;
-    font-size: 15px;
-    padding: 2px 0;
-
+section.contact label{
+    color: #23a6d5;
+    font-size: 12px;
 }
 
 section.contact textarea {
@@ -339,11 +341,15 @@ section.contact textarea {
     padding: 5px;
     font-size: 15px;
     resize: none;
-    background: #ffff007e;
+    background: #7c4dff98;
     color: #000;
     margin-bottom: 20px;
     outline: none;
+    border-radius: 5px;
 }
+/* section.contact textarea:hover{
+background: #ffff007e;
+} */
 
 section.contact form button {
     display: block;
@@ -352,10 +358,7 @@ section.contact form button {
     font-size: 18px;
     letter-spacing: 1.5px;
     cursor: pointer;
-
-    background: linear-gradient(-45deg, #00b0ff 40%, #7c4dff, #d500f9, #f50057);
-    animation: gradient 10s ease-in-out infinite;
-    background-size: 300% 300%;
+   
 }
 
 
@@ -509,12 +512,14 @@ footer .item p {
 
     header #btn-mobile {
         display: flex;
+    
+       
     }
 
     header #hamburguer {
-        color: #76ff03;
+        color: #ccc;
         width: 30px;
-        border-top: 2px solid;
+        border-top: 3px solid;
     }
 
     header #hamburguer::after, #hamburguer::before {
@@ -535,13 +540,15 @@ footer .item p {
     header nav.active #hamburguer::before {
         position: relative;
         transform: rotate(135deg);
-        top: 7px;
+
     }
 
     header nav.active #hamburguer::after {
         position: relative;
         transform: rotate(-135deg);
-
+        top:-7px;
+        
+    
     }
 
     /********************************* Media queries Section About-me **********************************/

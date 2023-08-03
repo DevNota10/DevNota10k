@@ -159,15 +159,13 @@ function nameValidation(nome){
         }
          if(amount >=2 ){
             for( let i = 0 ; i < amount; i++ ){
-                if(splitStr[i].match(/^[A-Z]{1}[a-z]{1,}$/)){
-                    console.log('condição bateu')
+                if(splitStr[i].match(/^[A-Z]{1}[a-z]{1,}$/)){       
     
                 }else{
                     return false;
                 }
             }
          }else{
-            console.log('não tem')
 
             return false;
          }
@@ -192,16 +190,21 @@ function telValidation(tel){
     return false
     }
 }
-/*
-CORRIGIR ERRO DE VALIDAÇÃO DO TEXT AREA
-function textareaValidation(textarea){
-if(textarea == ''){
-    return false 
-}
+
+// CORRIGIR ERRO DE VALIDAÇÃO DO TEXT AREA
+function styleTextArea(){
+    // textarea.style.background='red'
     
+    textarea.addEventListener("focus",()=>{
+        textarea.style.background=' #ffff007e'
+    })
+    textarea.addEventListener('blur',()=>{
+        textarea.style.background=''
+    })
 }
-*/
-//Function to show error:
+styleTextArea()
+
+//Function to show form error:
 function applyError(index){
     index.style.border='2px solid red';
     index.value= '*Campo Inválido';
