@@ -100,11 +100,23 @@
         </div>
         <!--box-skills-->
 
-        <div class="container">
-          <div class="box-img-dev" data-anime="right">
-            <img src="./img/Dev_Kleber-img.png" alt="" />
-          </div>
+       
+        <div class="box-img-dev" data-anime="right">
+         
+          <div class="box-cube">
+            <div class="card" id="front"> <img src="./img/Dev_Kleber-img.png" alt="img-dev-Kleber" /></div>
+            <div class="card" id="back">Back</div>
+            <div class="card" id="left"><img src="./img/cat-2.jpg" alt=""></div>
+            <div class="card" id="right"><img src="./img/cat.png" alt=""></div>
+            <div class="card" id="top">Top</div>
+            <div class="card" id="bottom"><img src="./img/js.jpg" alt=""></div>
 
+          </div><!--box-cube-->
+        </div><!--box-img-dev-->
+
+        <div class="container">
+
+      
           <div class="text-about-me text" data-anime="left">
             <h1>Sobre</h1>
             <p>
@@ -137,9 +149,13 @@
                 "
                 >Kleber Gaspar</i>
             </p>
-            <button><a href="#contact">Contato</a></button>
+        
           </div>
           <!--text-about-me-->
+        </div>
+        <div class="box-btn-contact">
+          <button><a href="#contact">Contato</a></button>
+
         </div>
         <!--container-->
       </section>
@@ -331,7 +347,7 @@
 
     <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
     <script type="text/javascript">
-      VanillaTilt.init(document.querySelector(".box-img-dev"), {
+      VanillaTilt.init(document.querySelector(".text-about-me "), {
         max: 25,
         speed: 400,
       });

@@ -4,7 +4,7 @@
     box-sizing: border-box;
     /* letter-spacing: 1.5px; */
     font-family: 'Montserrat', sans-serif;
-  
+
 }
 
 /* html{
@@ -69,14 +69,17 @@ header nav a {
     padding: 0.5rem;
     transition: .5s;
 }
+
 header nav a:hover {
     color: #808080;
     transition: .5s;
 }
+
 header nav a:active {
     color: #ff002f;
     transition: .2s;
 }
+
 #btn-mobile {
     cursor: pointer;
     padding: .5rem;
@@ -113,7 +116,7 @@ body.dark {
     width: 50px;
     height: 26px;
     display: flex;
-   
+
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
@@ -157,17 +160,18 @@ body.dark {
 .text {
     color: #747070
 }
+
 /**************** Start Sections ***************/
 section.father {
     padding: 100px 2% 0 2%;
     overflow-x: hidden;
     box-shadow: none;
-    max-width: 1400px; 
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 section {
-  
+
     margin-bottom: 100px;
     box-shadow: 10px 20px 30px #7c4dff;
     padding: 20px;
@@ -235,27 +239,138 @@ section.about-me .brands {
 }
 
 section.about-me .box-img-dev {
-    width: 30%;
-    max-height: 30%;
-    position: relative;
+    margin:  auto;
+    width: 300px;
+    height: 300px;
+
     cursor: pointer;
+    perspective: 1000px;
+}
+section.about-me .box-img-dev img{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-section.about-me .box-img-dev img {
-    border-radius: 20%;
-    filter: drop-shadow(-5px 5px 10px #484545);
+section.about-me .box-cube {
+    width: 250px;
+    height: 250px;
+    top: 20px;
+    left: 0px;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: animate-cube 5s infinite;
+}
 
+
+@keyframes animate-cube {
+    0% {
+        transform: rotateX(45deg) rotateY(-45deg);
+    }
+
+    25% {
+        transform: rotateX(-45deg) rotateY(-45deg);
+    }
+
+    50% {
+        transform: rotateX(45deg) rotateY(45deg);
+    }
+
+    75% {
+        transform: rotateX(45deg) rotateY(45deg);
+    }
+
+    100% {
+        transform: rotateX(45deg) rotateY(-45deg);
+    }
+}
+
+section.about-me .card {
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    padding: 100px 0px;
+    color: #fff;
+    /* background: #000; */
+    border: 2px solid #fff;
+    font-size: 32px;
+    box-sizing: border-box;
+    position: absolute;
+    transition: all 1s;
+
+    
     animation: gradient 10s ease-in-out infinite;
-    background: linear-gradient(-45deg, #00b0ff 60%, #d500f9, #1e88e5) no-repeat;
+    background: linear-gradient(-45deg, #00b0ff, #d500f9, #1e88e5,#000 70%) no-repeat;
+    /* background: linear-gradient(-45deg,#00b0ff, #d500f9, #f50057) no-repeat; */
     background-size: 300% 300%;
 }
 
-section.about-me .text-about-me {
-    width: 70%;
-    padding: 0 20px;
-    line-height: 40px;
+
+section.about-me .box-cube #front {
+    transform: translateZ(125px);
 }
 
+section.about-me .box-cube #back {
+    transform: translateZ(-125px);
+}
+
+section.about-me .box-cube #left {
+    right: 125px;
+    transform: rotateY(-90deg);
+}
+
+section.about-me .box-cube #right {
+    left: 125px;
+    transform: rotateY(90deg);
+}
+
+section.about-me .box-cube #top {
+    bottom: 125px;
+    transform: rotateX(90deg);
+}
+
+section.about-me .box-cube #bottom {
+    top: 125px;
+    transform: rotateX(-90deg);
+}
+
+section.about-me .box-img-dev:hover .box-cube #front{
+    transform: translateZ(180px) rotateY(360deg);
+
+}
+section.about-me .box-img-dev:hover .box-cube #back{
+    transform: translateZ(-180px) rotateY(360deg);
+}
+
+section.about-me .box-img-dev:hover .box-cube #left{
+   right: 180px;
+
+}
+section.about-me .box-img-dev:hover .box-cube #right{
+   left: 180px;
+
+}
+section.about-me .box-img-dev:hover .box-cube #top{
+    bottom: 180px;
+
+}
+section.about-me .box-img-dev:hover .box-cube #bottom{
+   top: 180px;
+}
+
+section.about-me .text-about-me {
+    margin-top: 100px;
+    padding: 0 20px;
+    line-height: 40px;
+
+
+}
+section.about-me .box-btn-contact{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 120px;
+  
+}
 /**************Sections Projects *****************/
 
 section.projects .container {
@@ -274,7 +389,7 @@ section.projects .video-projects {
     background: #1f221f;
 }
 
- button {
+button {
     margin: 20px auto;
 
     background: linear-gradient(-45deg, #00b0ff 40%, #7c4dff, #d500f9, #f50057);
@@ -330,7 +445,7 @@ section.contact form input {
     border-radius: 5px;
 }
 
-section.contact label{
+section.contact label {
     color: #23a6d5;
     font-size: 12px;
 }
@@ -347,6 +462,7 @@ section.contact textarea {
     outline: none;
     border-radius: 5px;
 }
+
 /* section.contact textarea:hover{
 background: #ffff007e;
 } */
@@ -358,7 +474,7 @@ section.contact form button {
     font-size: 18px;
     letter-spacing: 1.5px;
     cursor: pointer;
-   
+
 }
 
 
@@ -512,8 +628,8 @@ footer .item p {
 
     header #btn-mobile {
         display: flex;
-    
-       
+
+
     }
 
     header #hamburguer {
@@ -546,9 +662,9 @@ footer .item p {
     header nav.active #hamburguer::after {
         position: relative;
         transform: rotate(-135deg);
-        top:-7px;
-        
-    
+        top: -7px;
+
+
     }
 
     /********************************* Media queries Section About-me **********************************/
@@ -577,16 +693,8 @@ footer .item p {
         font-size: 40px;
     }
 
-    section.about-me .box-img-dev {
-        width: 150px;
-        height: 150px;
-        transition: 1s;
-    }
 
-    section.about-me .text-about-me {
-        width: 100%;
-    }
-
+   
 
     /********************************* Media queries Section Projects **********************************/
 
