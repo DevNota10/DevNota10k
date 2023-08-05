@@ -239,7 +239,7 @@ section.about-me .brands {
 }
 
 section.about-me .box-img-dev {
-    margin:  auto;
+    margin: 100px  auto;
     width: 300px;
     height: 300px;
 
@@ -359,10 +359,9 @@ section.about-me .box-img-dev:hover .box-cube #bottom{
 }
 
 section.about-me .text-about-me {
-    margin-top: 100px;
+    margin-top: 10px;
     padding: 0 20px;
     line-height: 40px;
-
 
 }
 section.about-me .box-btn-contact{
